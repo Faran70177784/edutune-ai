@@ -1,0 +1,73 @@
+{
+  "project": "EduTune AI",
+  "validation_version": "1.0",
+  "curated_dataset": {
+    "file": "C:\\Users\\alifa\\Downloads\\edutune-ai\\data\\processed\\curated_dataset.jsonl",
+    "records": 8,
+    "parsing_errors": [],
+    "record_errors": [],
+    "duplicates": [],
+    "repeated_phrases": [],
+    "distributions": {
+      "category": {
+        "biology": 2,
+        "computer_science": 3,
+        "economics": 1,
+        "mathematics": 1,
+        "physics": 1
+      },
+      "difficulty": {
+        "beginner": 7,
+        "intermediate": 1
+      },
+      "source": {
+        "seed": 8
+      }
+    },
+    "summary": {
+      "valid": true,
+      "total_issues": 0,
+      "parsing_errors": 0,
+      "record_errors": 0,
+      "duplicates": 0,
+      "repeated_phrases": 0
+    }
+  },
+  "synthetic_dataset": {
+    "file": "C:\\Users\\alifa\\Downloads\\edutune-ai\\data\\synthetic\\synthetic_dataset.jsonl",
+    "records": 64,
+    "parsing_errors": [],
+    "record_errors": [],
+    "duplicates": [],
+    "repeated_phrases": [],
+    "distributions": {
+      "category": {
+        "biology": 16,
+        "computer_science": 24,
+        "economics": 8,
+        "mathematics": 8,
+        "physics": 8
+      },
+      "difficulty": {
+        "intermediate": 64
+      },
+      "source": {
+        "synthetic": 64
+      },
+      "task_type": {
+        "concept_explanation": 16,
+        "example_generation": 16,
+        "question_answering": 16,
+        "study_guidance": 16
+      }
+    },
+    "summary": {
+      "valid": true,
+      "total_issues": 0,
+      "parsing_errors": 0,
+      "record_errors": 0,
+      "duplicates": 0,
+      "repeated_phrases": 0
+    }
+  }
+}

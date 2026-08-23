@@ -1,0 +1,57 @@
+{
+  "metrics": {
+    "exact_match": 1.0,
+    "token_overlap": 1.0
+  },
+  "results": [
+    {
+      "index": 0,
+      "prediction": "difference between a variable and a constant is an important concept in computer science. A student should begin by understanding its definition and the main idea behind it. The concept becomes easier to remember when it is connected to examples and practical applications.",
+      "reference": "difference between a variable and a constant is an important concept in computer science. A student should begin by understanding its definition and the main idea behind it. The concept becomes easier to remember when it is connected to examples and practical applications.",
+      "exact_match": 1.0,
+      "token_overlap": 1.0
+    },
+    {
+      "index": 1,
+      "prediction": "The importance of role of mitochondria in a cell comes from its role in biology. Understanding this concept helps students connect foundational knowledge with related topics and recognize how the idea can be applied in academic or practical situations.",
+      "reference": "The importance of role of mitochondria in a cell comes from its role in biology. Understanding this concept helps students connect foundational knowledge with related topics and recognize how the idea can be applied in academic or practical situations.",
+      "exact_match": 1.0,
+      "token_overlap": 1.0
+    },
+    {
+      "index": 2,
+      "prediction": "The importance of difference between a variable and a constant comes from its role in computer science. Understanding this concept helps students connect foundational knowledge with related topics and recognize how the idea can be applied in academic or practical situations.",
+      "reference": "The importance of difference between a variable and a constant comes from its role in computer science. Understanding this concept helps students connect foundational knowledge with related topics and recognize how the idea can be applied in academic or practical situations.",
+      "exact_match": 1.0,
+      "token_overlap": 1.0
+    },
+    {
+      "index": 3,
+      "prediction": "photosynthesis is an important concept in biology. A student should begin by understanding its definition and the main idea behind it. The concept becomes easier to remember when it is connected to examples and practical applications.",
+      "reference": "photosynthesis is an important concept in biology. A student should begin by understanding its definition and the main idea behind it. The concept becomes easier to remember when it is connected to examples and practical applications.",
+      "exact_match": 1.0,
+      "token_overlap": 1.0
+    },
+    {
+      "index": 4,
+      "prediction": "The importance of Pythagorean theorem comes from its role in mathematics. Understanding this concept helps students connect foundational knowledge with related topics and recognize how the idea can be applied in academic or practical situations.",
+      "reference": "The importance of Pythagorean theorem comes from its role in mathematics. Understanding this concept helps students connect foundational knowledge with related topics and recognize how the idea can be applied in academic or practical situations.",
+      "exact_match": 1.0,
+      "token_overlap": 1.0
+    },
+    {
+      "index": 5,
+      "prediction": "Newton's second law is an important concept in physics. A student should begin by understanding its definition and the main idea behind it. The concept becomes easier to remember when it is connected to examples and practical applications.",
+      "reference": "Newton's second law is an important concept in physics. A student should begin by understanding its definition and the main idea behind it. The concept becomes easier to remember when it is connected to examples and practical applications.",
+      "exact_match": 1.0,
+      "token_overlap": 1.0
+    },
+    {
+      "index": 6,
+      "prediction": "The importance of difference between a variable and a constant comes from its role in computer science. Understanding this concept helps students connect foundational knowledge with related topics and recognize how the idea can be applied in academic or practical situations.",
+      "reference": "The importance of difference between a variable and a constant comes from its role in computer science. Understanding this concept helps students connect foundational knowledge with related topics and recognize how the idea can be applied in academic or practical situations.",
+      "exact_match": 1.0,
+      "token_overlap": 1.0
+    }
+  ]
+}

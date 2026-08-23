@@ -1,0 +1,40 @@
+# ============================================================
+# EduTune AI - Core Dependencies
+# ============================================================
+
+# Environment & configuration
+python-dotenv==1.1.1
+PyYAML==6.0.3
+
+# Data processing
+pandas==2.3.2
+numpy==2.3.2
+datasets==4.0.0
+
+# Machine Learning / Deep Learning
+torch
+transformers
+accelerate
+peft
+bitsandbytes
+trl
+
+# Hugging Face ecosystem
+huggingface_hub
+
+# Experiment tracking
+wandb
+
+# Evaluation
+scikit-learn
+evaluate
+
+# Application
+streamlit
+
+# Utilities
+tqdm
+requests
+
+# Testing
+pytest

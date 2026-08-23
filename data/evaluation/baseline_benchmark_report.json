@@ -1,0 +1,12 @@
+{
+  "status": "blocked",
+  "reason": "CUDA is unavailable. The configured Mistral-7B baseline benchmark requires a CUDA-enabled environment.",
+  "hardware": {
+    "cuda_available": false,
+    "device": "cpu",
+    "model_id": "mistralai/Mistral-7B-Instruct-v0.3",
+    "status": "blocked",
+    "device_name": null
+  },
+  "model_id": "mistralai/Mistral-7B-Instruct-v0.3"
+}

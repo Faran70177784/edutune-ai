@@ -1,0 +1,18 @@
+{
+  "baseline": {
+    "exact_match": 0.4,
+    "token_overlap": 0.6
+  },
+  "finetuned": {
+    "exact_match": 0.7,
+    "token_overlap": 0.8
+  },
+  "absolute_improvement": {
+    "exact_match": 0.3,
+    "token_overlap": 0.2
+  },
+  "relative_improvement_percent": {
+    "exact_match": 75.0,
+    "token_overlap": 33.3333333333
+  }
+}

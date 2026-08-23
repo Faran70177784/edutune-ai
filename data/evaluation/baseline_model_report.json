@@ -1,0 +1,13 @@
+{
+  "status": "blocked",
+  "reason": "CUDA is unavailable. Baseline evaluation of Mistral-7B requires a CUDA-enabled GPU.",
+  "model_id": "mistralai/Mistral-7B-Instruct-v0.3",
+  "hardware": {
+    "device": "cpu",
+    "cuda_available": false,
+    "model_id": "mistralai/Mistral-7B-Instruct-v0.3",
+    "status": "blocked",
+    "gpu_name": null,
+    "device_count": 0
+  }
+}
