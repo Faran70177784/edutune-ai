@@ -1,19 +1,15 @@
-"""Tokenizer utilities for EduTune AI."""
+"""
+Tokenizer utilities for EduTune AI.
+
+Tokenizer loading is independent from model-weight loading, so tokenizer
+inspection can be performed in CPU-only development environments.
+"""
 
 from __future__ import annotations
 
-import sys
-from pathlib import Path
 from typing import Any
 
-
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.insert(0, str(PROJECT_ROOT))
-
-
-from config.settings import MODEL_ID  # noqa: E402
+from config.settings import MODEL_ID
 
 
 def load_tokenizer(
@@ -21,32 +17,34 @@ def load_tokenizer(
     **kwargs: Any,
 ):
     """
-    Load the tokenizer associated with the base model.
+    Load the tokenizer associated with the configured foundation model.
 
-    Parameters
-    ----------
-    model_id:
-        Hugging Face model identifier.
+    Args:
+        model_id: Hugging Face model identifier.
+        **kwargs: Additional arguments forwarded to AutoTokenizer.
 
-    Returns
-    -------
-    AutoTokenizer
-        Hugging Face tokenizer instance.
+    Returns:
+        A Hugging Face tokenizer instance.
     """
-
-    from transformers import AutoTokenizer
+    try:
+        from transformers import AutoTokenizer
+    except ImportError as exc:
+        raise ImportError(
+            "Tokenizer loading requires the Transformers package."
+        ) from exc
 
     tokenizer = AutoTokenizer.from_pretrained(
         model_id,
         **kwargs,
     )
 
-    # Mistral-family tokenizers normally have
-    # an EOS token but no dedicated PAD token.
     if tokenizer.pad_token is None:
-        tokenizer.pad_token = (
-            tokenizer.eos_token
-        )
+        if tokenizer.eos_token is not None:
+            tokenizer.pad_token = tokenizer.eos_token
+        else:
+            raise RuntimeError(
+                "Tokenizer has neither a pad token nor an EOS token."
+            )
 
     return tokenizer
 
@@ -54,11 +52,10 @@ def load_tokenizer(
 def inspect_tokenizer(
     model_id: str = MODEL_ID,
 ) -> dict[str, Any]:
-    """Return basic tokenizer information."""
-
-    tokenizer = load_tokenizer(
-        model_id
-    )
+    """
+    Return basic tokenizer metadata.
+    """
+    tokenizer = load_tokenizer(model_id)
 
     return {
         "model_id": model_id,
@@ -75,7 +72,8 @@ def inspect_tokenizer(
 if __name__ == "__main__":
     information = inspect_tokenizer()
 
+    print("EduTune AI tokenizer information")
+    print("-" * 36)
+
     for key, value in information.items():
-        print(
-            f"{key}: {value}"
-        )
+        print(f"{key}: {value}")
